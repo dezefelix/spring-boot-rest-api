@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Using JPA with a mix of JPA OO style operations and JPQL queries.
+ * Trying both
  */
 @Service
 @Transactional
@@ -18,8 +19,7 @@ public class StudentService {
     @PersistenceContext
     private EntityManager em;
 
-    public StudentService() {
-    }
+    public StudentService() { }
 
     // Although Student table is not recognized. This does work!
     public List<Student> fetch() {

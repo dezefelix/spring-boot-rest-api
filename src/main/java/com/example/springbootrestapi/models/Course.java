@@ -13,6 +13,14 @@ public class Course {
     @ManyToMany(mappedBy = "courses")  // Default fetch type for ManyToMany is LAZY. As is for OneToMany. Others are EAGER.
     private List<Student> students = new ArrayList<>();
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public List<Student> getStudents() {
         return students;
     }
